@@ -1,0 +1,24 @@
+#root {
+  max-width: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color:  #F2BE22;
+  border-radius: 5px;  
+}
+
+.bg-success {
+  border-radius: 100%;
+  font-size: 25px;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(to top, #F29727 0%, #F24C3D 100%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
