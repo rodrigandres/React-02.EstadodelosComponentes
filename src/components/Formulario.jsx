@@ -22,6 +22,18 @@ function Formulario({setMessage, setBsStyle}) {
             return;
         }
 
+       // Validar contraseña alfanumérica
+        if (!isValidPassword(password)) {
+            setMessage('La contraseña debe ser alfanumérica y tener entre 6 y 12 caracteres');
+            return;
+        }
+
+        // Validar nombre, solo texto
+        if (!isValidName(name)) {
+            setMessage('El nombre solo puede contener caracteres de texto');
+            return;
+        }
+
         //Validar campos vacios
         if (name === '' || email === '' || password === '' || confirmPassword === ''){
             setMessage('Completa todos los campos')
@@ -40,6 +52,16 @@ function Formulario({setMessage, setBsStyle}) {
     const isValidEmail = (email) => {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
+    }
+
+    const isValidPassword = (password) => {
+        const passwordRegex = /^[a-zA-Z0-9]{6,12}$/;
+        return passwordRegex.test(password);
+    }
+
+    const isValidName = (name) => {
+        const nameRegex = /^[a-zA-Z\s]*$/;
+        return nameRegex.test(name);
     }
 
     return (
