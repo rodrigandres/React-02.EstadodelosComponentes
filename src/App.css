@@ -13,7 +13,11 @@
 }
 
 body {
-  height: 100vh;
+  font-family: 'Nunito', sans-serif !important;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
   background-image: linear-gradient(to top, #F29727 0%, #F24C3D 100%);
 }
 
